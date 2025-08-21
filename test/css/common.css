@@ -43,17 +43,9 @@ ol, li, ul {
 *{ /* *(와일드카드) 모든 태그 - 여백삭제 */
 	margin: 0;
 	padding: 0;
+    box-sizing: border-box;
 }
 .wrapper {
     width: 1260px;
     margin: 0 auto;
-    box-sizing: border-box;
-}
-.biz strong,
-.ship strong {
-    
-}
-.biz {
-    margin: 153px 0 0 0;
-    text-align: center;
 }
