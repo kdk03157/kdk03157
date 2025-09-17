@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <!--jquery 라이브러리를 반드시 먼저 추가-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
     <title>청산도</title>
 </head>
 <body>
     <div id="wrap">
-        <header>
+        <header id="header">
             <div class="wrapper">
-                <h1 class="logo"><img src="images/logo.svg"></h1>
+                <h1 class="logo"><img src="images/logo.svg" alt="완도군 청산도"></h1>
                 <nav class="gnb">
                     <ul>
                         <li><a href="#">청산도 소개</a></li>
-                        <li><a href="#">광고안내</a></li>
-                        <li><a href="#">추천안내</a></li>
+                        <li><a href="#">관광안내</a></li>
+                        <li><a href="#">추천여행</a></li>
                         <li><a href="#">커뮤니티</a></li>
                     </ul>
                 </nav>
@@ -24,18 +27,18 @@
                         <strong>25.7℃</strong>
                         <span>흐림</span>
                     </a>
-                    <a href="n" class="sea">바다예보</a>
-                    <a href="n" class="flow">물때표</a>
+                    <a href="#n" class="sea">바다예보</a>
+                    <a href="#n" class="flow">물때표</a>
                 </div>
             </div>
         </header>
         <main class="container">
             <section class="visual">
                 <div class="wrapper">
-                    <h2><img src="images/visual_text.png" alt="청산도는 쉼이다"></h2>
+                    <h2><img src="images/visual_txt.png" alt="청산도는 쉼이다"></h2>
                     <a href="#n" class="life">청산도<br><strong>한달살이</strong></a>
                 </div>
-            </section>
+            </section><!--visual-->
             <section class="culture">
                 <div class="wrapper">
                     <div class="tit">
@@ -76,7 +79,7 @@
                     </div>
                     <div class="more"><a href="#n">MORE</a></div>
                 </div>
-            </section>
+            </section><!--culture-->
             <section class="tour">
                 <div class="wrapper">
                     <div class="tit">
@@ -85,20 +88,20 @@
                     </div>
                     <div class="list">
                         <ul>
-                            <!--열려있는 li에 on클래스를 추가해줌 (단 1개의 li에만 on클래스 추가)-->
-                            <li class="bg1">
+                            <!-- 열려있는 li에 on클래스를 추가해줌 (단 1개의 li에만 on클래스 추가) -->
+                            <li class="bg1 ">
                                 <a href="#n">
                                     <h3>1경 항도귀범</h3>
                                     <p>목섬에서 한가히 돌아오는 돛단배의 아름다움</p>
                                 </a>
                             </li>
-                            <li class="bg2">
+                            <li class="bg2 ">
                                 <a href="#n">
                                     <h3>2경 오산낙조</h3>
                                     <p>멀리 두섬(모도) 상정에 붉게 물든 낙조가 바다길을 열도다</p>
                                 </a>
                             </li>
-                            <li class="bg3">
+                            <li class="bg3 ">
                                 <a href="#n">
                                     <h3>3경 대봉연사</h3>
                                     <p>백연사의 목탁소리 대봉산에 메아리치고</p>
@@ -112,15 +115,15 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="more"></div>
+                    <div class="more"><a href="#n">MORE</a></div>
                 </div>
-            </section>
+            </section><!--tour-->
             <section class="community">
                 <div class="wrapper">
                     <div class="tit">
-                        <h2>슬로우시티<br>청산도</h2>
-                        <p>느리게 걷고 깊게 파고들수록<br>아름다운 섬</p>
-                    </div>
+                        <h2>슬로우시티<br> 청산도</h2>
+                        <p>느리게 걷고 깊게 파고들수록 <br>아름다운 섬</p>
+                    </div><!--tit-->
                     <div class="inner">
                         <div class="notice">
                             <h3>공지사항</h3>
@@ -133,7 +136,7 @@
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <h4>봉숭아 손톱 물들이기</h4>
+                                        <h4>봉숭아 손톱 물들이기 </h4>
                                         <span>25-08-22</span>
                                     </a>
                                 </li>
@@ -145,7 +148,7 @@
                                 </li>
                                 <li>
                                     <a href="#n">
-                                        <h4>청산 미래의 아름다움 靑山八景 (청산팔경) </h4>
+                                        <h4>청산 미래의 아름다움 靑山八景 (청산팔경) 전국 생방송된 청산도 사진한장</h4>
                                         <span>25-03-18</span>
                                     </a>
                                 </li>
@@ -156,57 +159,59 @@
                                     </a>
                                 </li>
                             </ul>
-                            <!--마우스 오버할때 이미지가 변경되어야 하는 경우
-                                이미지는 background 처리해야함
-                                대체텍스트는 써줘야함, 글자는 css로-->
+                            <!-- 마우스 오버할때 이미지가 변경되어야 하는 경우
+                                 이미지는 background 처리해야함
+                                 대체텍스트는 써줘야함, 글자는 css로 display:none -->
                             <a href="#n" class="more"><span>더보기</span></a>
-                        </div>
+                        </div><!--notice-->
                         <div class="service">
                             <ul>
-                                <li class="icon1"><a href="n">교통</a></li>
-                                <li class="icon2"><a href="n">음식</a></li>
-                                <li class="icon3"><a href="n">숙박</a></li>
-                                <li class="icon4"><a href="n">slow<br> road</a></li>
+                                <li class="icon1"><a href="#n">교통</a></li>
+                                <li class="icon2"><a href="#n">음식</a></li>
+                                <li class="icon3"><a href="#n">숙박</a></li>
+                                <li class="icon4"><a href="#n">slow<br> road</a></li>
                             </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                        </div><!--service-->
+                    </div><!--inner-->
+                </div><!--wrapper-->
+            </section><!--community-->
         </main>
         <footer>
             <div class="wrapper">
-                <div clas="left_area">
+                <div class="left_area">
                     <div class="f_nav">
                         <ul>
-                            <li><a href="privacy">개인정보처리방침</a></li>
+                            <li class="privacy"><a href="#n">개인정보처리방침</a></li>
                             <li><a href="#n">이메일무단수집거부</a></li>
                             <li><a href="#n">저작권안내</a></li>
                         </ul>
-                   </div>
-                   <div class="f_info">
+                    </div><!--f_nav-->
+                    <div class="f_info">
                         <address>전남 완도군 청산면 도청리 1143번지</address>
                         <span>문의전화 : 061-552-0809</span>
-                   </div>
-                   <div class="copyrignt">
+                    </div><!--f_info-->
+                    <div class="copyright">
                         <p>ⓒ cheongsando.net All rights reserved.</p>
-                        <p>※ www.cheongsando.net의 내용 및 이미지 무단링크, 무단전재, 재배포를 금지합니다.</p>
-                   </div>
-                </div>
+                        <p class="no"><span>※ www.cheongsando.net의 내용 및 이미지 무단링크, 무단전재, 재배포를 금지합니다.</span></p>
+                    </div><!--copyright-->
+                </div><!--left_area-->
                 <div class="right_area">
-                    <!--family_site open 클래스를 주면 열린 상태임-->
-                    <div class="familt_site open">
-                        <button class="open">관련사이트</button>
+                    <!-- family_site open 클래스를 주면 열린 상태임 -->
+                    <div class="family_site ">
+                        <button class="family_open">관련사이트</button><!--여는 버튼-->
                         <div class="family_detail">
                             <ul>
-                                <li><a href="#n"><span>전라남도청</span></a></li>
-                                <li><a href="#n"><span>완도군청</span></a></li>
+                                <li><a href="https://www.jeonnam.go.kr" target="_blank" title="새창열림"><span>전라남도청</span></a></li>
+                                <li><a href="https://www.wando.go.kr" target="_blank" title="새창열림"><span>완도군청</span></a></li>
                             </ul>
                         </div>
-                        <button class="family_close">관련사이트</button>
-                </div>
-                <button class="top"><span>위로가기</span></button>
-            </div>
+                        <button class="family_close">관련사이트</button><!--닫는 버튼-->
+                    </div>
+                    <button class="top">TOP</button>
+                    <!-- <a href="#header" class="top">TOP</a> -->
+                </div><!--right_area-->
+            </div><!--wrapper-->
         </footer>
-    </div>
+    </div><!--wrap-->
 </body>
 </html>
