@@ -2,36 +2,6 @@
 @import url(fonts.css);
 @import url(common.css);
 
-header {
-    height: 90px;
-    positon: absolute; /* wrap을 기준으로 정렬 */
-    left: 0;
-    top: 0;
-    z-index: 100;
-    width: 100%;
-    color: #fff;
-    display: flex; /* logo-gnb-util 좌우배치 */
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px 0 20px;
-}
-header .logo a {
-    display: block;
-    width: 119px;
-    height: 47px;
-    background: url(../images/logo.svg) no-repeat center center / contain;
-    /* 이미지를 잘리지 않게 모두 나오게 함 - contain */
-}
-header .gnb .gnb_open,
-header .gnb .gnb_close {
-    display: none;
-}
-@media screen and (max-width: 768px){
-    header .logo a {
-        width: 83px;
-        height: 33px;
-    }
-}
 .visual {
     position: relative; /* btn_wrap 정렬의 기준 */
 }
@@ -154,8 +124,7 @@ header .gnb .gnb_close {
 }
 .biz .list ul {
     display: flex;
-    flex-wrap: nowrap; /* 여러줄 허용 */
-    flex-direction: column;
+    flex-wrap: wrap; /* 여러줄 허용 */
     gap: 24px 24px; /* 위아래-좌우 */
 }
 .biz .list ul li {
@@ -174,7 +143,6 @@ header .gnb .gnb_close {
     overflow: hidden;
     height: 500px;
     border-radius: 30px;
-    position: relative; /* befotre 정렬의 기준 */
 }
 .biz .list ul li a .photo img {
     width: 100%;
@@ -185,84 +153,17 @@ header .gnb .gnb_close {
     position: absolute;
     left: 50px;
     width: calc(100% - 100px);
-    bottom: -20px;
+    bottom: 77px;
     color: #fff;
-    transition: 0.5s;
 }
 .biz .list ul li a .txt h3 {
-    bottom: 65px;
+    font-size: 32px;
 }
 .biz .list ul li a .txt p {
-    font-size: 32px;
-
-
-.biz .list ul li a:hover .photo::before {
-    opacity: 0;
-    margin: 16px 0 0 0;
-    color: rgba(255,255,255,0.8);
-    transition: 0.5s;
-}
-.biz .list ul li a:hover .txt p {
-   opacity: 1;
-}
-@media screen and (max-width: 768px)}; /* 769이상에서 적용 */
-        .biz .list ul li a:hover .photo::before {
-            opacity: 0.9;
-        }
-.notice {
-    margin: 121px 0 0 0;
-    background-color: #f3f6f9;
-    padding: 158px 0 121px 0;
-}
-.notice .list {
-    margin: 42px 0 0 0;
-}
-.notice .list ul li {
-    margin:  0 0 12px 0;
+    display: none; /* 안보임 */
 }
 
-.notice .list ul li:last-child {
-    margin-bottom: 0;
-}
-.notice .list ul li:last-child {
-    display: flex;
-    background-color: #fff;
-    border-radius: 10px;
-    border: 1px solid #e1e5ec;
-    box-shadow:  2px 2px 5px 0 rgba(0, 0, 0, 0.05);
-    padding: 22px 50px 20px 40px;
-}
-.notice .list ul li a .inner {
-    display: : flex;
-    align-items:  center;
-    font-size: 17px;
-    font-weight: 500;
-}
-.notice .list ul li a span {
-   border-color: #fff;
-}
-.notice .list li a:hover .inner h3 {
-    color: #fff;
-}
-.notice .more {
-    top: 34px; 
-}
-.notice .more a ::after {
-    content:"" ;
-    position: absolute; /*more를 기준으로 정렬 */
-    right:0;
-    top: 9px;
-    width: 12px;
-    height: 12px;
-}
-.notice .list ul li:last-child{
-    display: none;
-.notice .list ul li:nth-last-child(2) {
 
-
-
-}
-}
 footer {
     margin: 1500px 0 0 0;
 }
